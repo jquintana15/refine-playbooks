@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --border: 220 14% 90%;
+  --background: 0 0% 100%;
+  --foreground: 222 20% 12%;
+}
+
+.dark {
+  --border: 222 20% 20%;
+  --background: 222 47% 6%;
+  --foreground: 210 20% 98%;
+}
+
+* { border-color: hsl(var(--border)); }
+body { background-color: hsl(var(--background)); color: hsl(var(--foreground)); }
+::selection { background: rgba(47, 111, 237, 0.18); }
+
+#reading-progress-bar {
+  transition: width 0.1s ease-out;
+}
+
+.prose-playbook h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 2.25rem;
+  margin-bottom: 0.75rem;
+  scroll-margin-top: 5rem;
+}
+.prose-playbook h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.prose-playbook p { margin-bottom: 1rem; line-height: 1.75; }
+.prose-playbook ul, .prose-playbook ol { margin-bottom: 1rem; padding-left: 1.25rem; line-height: 1.75; }
+.prose-playbook ul { list-style: disc; }
+.prose-playbook ol { list-style: decimal; }
+.prose-playbook li { margin-bottom: 0.35rem; }
+.prose-playbook a { color: #2f6fed; text-decoration: underline; text-underline-offset: 2px; }
+.prose-playbook strong { font-weight: 600; }
+
+@media print {
+  .no-print { display: none !important; }
+}
